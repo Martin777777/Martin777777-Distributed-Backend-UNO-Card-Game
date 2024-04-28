@@ -1,0 +1,31 @@
+{
+  "name": "final-assignment-UNO-game",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vue/compat": "^3.4.21",
+    "axios": "^1.6.8",
+    "mongodb": "^4.10.0",
+    "bootstrap-vue": "^2.23.1",
+    "socket.io-client": "^4.7.4",
+    "vue": "^3.4.21",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vue-tsc": "^1.8.25"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

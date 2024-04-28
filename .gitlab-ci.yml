@@ -1,0 +1,30 @@
+stages:
+  - build
+  - deploy
+  - test
+
+before_script:
+  - echo "Starting CI/CD pipeline"
+
+build_job:
+  stage: build
+  script:
+    - docker build -t uno-server ./server
+    - docker build -t uno-ui ./ui
+
+deploy_job:
+  stage: deploy
+  script:
+    - kubectl delete -f k8s/ --ignore-not-found=true
+    - kubectl create -f k8s/
+  environment:
+    name: production
+
+test_job:
+  stage: test
+  script:
+    - npm install
+    - npx playwright test --headed --project=webkit --grep="test"
+
+after_script:
+  - echo "CI/CD pipeline finished"

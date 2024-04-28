@@ -1,0 +1,8 @@
+[init]
+	defaultBranch = none
+[fetch]
+	recurseSubmodules = false
+[transfer]
+	bundleURI = true
+[http "https://coursework.cs.duke.edu"]
+	sslCAInfo = /mnt/d/download/CS 590/final-assignment-team17/builds/TDkgpRsxZ/0/hy201/final-assignment-team17.tmp/CI_SERVER_TLS_CA_FILE

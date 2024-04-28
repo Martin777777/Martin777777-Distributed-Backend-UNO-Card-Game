@@ -1,0 +1,12 @@
+node_modules
+*-grade.yml.old*
+.DS_Store
+secrets.ts
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

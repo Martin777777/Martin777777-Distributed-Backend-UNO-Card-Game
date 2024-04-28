@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: db
+  name: db
+spec:
+  type: ClusterIP
+  ports:
+  - name: "db-service"
+    port: 27017
+    targetPort: 27017
+  selector:
+    app: db
+  

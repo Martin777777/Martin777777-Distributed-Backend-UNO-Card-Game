@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: server
+  name: server
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      labels:
+        app: server
+    spec:
+      containers:
+      - image: uno-server
+        name: server
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8101
+          name: server
+        env:
+        - name: MONGO_URL
+          value: "mongodb://db"
+        - name: CLIENT_URL
+          value: "http://localhost:31000"
+        - name: REDIS_URL
+          value: "redis://redis:6379"
+        - name: DISABLE_SECURITY
+          value: "1"
